@@ -1,0 +1,7 @@
+{
+    "name": "redis",
+    "selector": "redis",
+    "replicas": 4,
+    "image": "docker.io/library/redis:latest",
+    "port": ":3003"
+}
