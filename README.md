@@ -14,6 +14,7 @@ Below, we'll discuss how each of our components function.
 The core of our container orchestration system. This component is responsible for creation, updation and deletion of our pods based on the requests it receives. In its current implementation, Superlet uses Docker API to deal with containers. Our initial implementation was based on an even lower level library called containerd (which itself is based on runc). But, since containerd was never made to be very developer friendly, and due to a few more issues such as data cleanup, and other limitations, we switched to Docker API. Considering, Kubernetes itself was Docker based in its early iterations, we felt it was an okay decision to move forward with it. 
 
 ## SuperController:
+This component closely resembles the functioning of Controller Manager in Kubernetes. It compares the desried state of our cluster with the current state of the cluster. And if both of these states do not match, SuperController sends requests to the Superlet to create or delete certain pods. All this is done via te use of 
 
 ## SuperCache:
 
